@@ -3,6 +3,8 @@ package treeTesters;
 import positionInterfaces.Tree;
 import positionTree.BTNode;
 import positionTree.LinkedBinaryTree;
+import positionTree.LinkedBinaryTreeBFS;
+import positionTree.LinkedBinaryTreeBFS_Stack;
 import positionTree.LinkedBinaryTreeInOI;
 import positionTree.LinkedBinaryTreePostOI;
 
@@ -142,6 +144,97 @@ public class LinkedBinaryTreeTester {
 		v = (BTNode<Integer>) t3.insertRight(m, 45);
 
 		showTreeElements(t3);
+		
+		
+		LinkedBinaryTreeBFS<Integer> t4 = new LinkedBinaryTreeBFS<Integer>();
+		// ADD NECESSARY INSTRUCTIONS TO CONSTRUCT A NEW COPY OF THE SPECIFIED
+		// TREE...
+		
+		v = (BTNode<Integer>) t4.addRoot(4);
+
+		// add child to the left of root
+		m = (BTNode<Integer>) t4.insertLeft(v, 9);
+		// add child to left
+		v = (BTNode<Integer>) t4.insertLeft(m, 7);
+		// add child to right
+		v = (BTNode<Integer>) t4.insertRight(m, 10);
+
+		// add child to right of root
+		v = (BTNode<Integer>) t4.root(); // get ref to root
+		v = (BTNode<Integer>) t4.insertRight(v, 20);
+
+		// add child to left direct child of root
+		m = (BTNode<Integer>) t4.insertLeft(v, 15);
+		// add child to left
+		v = (BTNode<Integer>) t4.insertLeft(m, 12);
+		// add child to right
+		v = (BTNode<Integer>) t4.insertRight(m, 17);
+		// add child to left
+		v = (BTNode<Integer>) t4.insertLeft(v, 19);
+
+		// get root
+		m = (BTNode<Integer>) t4.root();
+
+		// get children of root at right
+		m = (BTNode<Integer>) t4.right(m);
+		// insert node at right
+		v = (BTNode<Integer>) t4.insertRight(m, 21);
+		// insert node at right (internal node)
+		m = (BTNode<Integer>) t4.insertRight(v, 40);
+
+		// add child to left
+		v = (BTNode<Integer>) t4.insertLeft(m, 30);
+
+		// add child to right
+		v = (BTNode<Integer>) t4.insertRight(m, 45);
+
+		showTreeElements(t4);
+		
+		
+		LinkedBinaryTreeBFS_Stack<Integer> t5 = new LinkedBinaryTreeBFS_Stack<Integer>();
+		// ADD NECESSARY INSTRUCTIONS TO CONSTRUCT A NEW COPY OF THE SPECIFIED
+		// TREE...
+		
+		v = (BTNode<Integer>) t5.addRoot(4);
+
+		// add child to the left of root
+		m = (BTNode<Integer>) t5.insertLeft(v, 9);
+		// add child to left
+		v = (BTNode<Integer>) t5.insertLeft(m, 7);
+		// add child to right
+		v = (BTNode<Integer>) t5.insertRight(m, 10);
+
+		// add child to right of root
+		v = (BTNode<Integer>) t5.root(); // get ref to root
+		v = (BTNode<Integer>) t5.insertRight(v, 20);
+
+		// add child to left direct child of root
+		m = (BTNode<Integer>) t5.insertLeft(v, 15);
+		// add child to left
+		v = (BTNode<Integer>) t5.insertLeft(m, 12);
+		// add child to right
+		v = (BTNode<Integer>) t5.insertRight(m, 17);
+		// add child to left
+		v = (BTNode<Integer>) t5.insertLeft(v, 19);
+
+		// get root
+		m = (BTNode<Integer>) t5.root();
+
+		// get children of root at right
+		m = (BTNode<Integer>) t5.right(m);
+		// insert node at right
+		v = (BTNode<Integer>) t5.insertRight(m, 21);
+		// insert node at right (internal node)
+		m = (BTNode<Integer>) t5.insertRight(v, 40);
+
+		// add child to left
+		v = (BTNode<Integer>) t5.insertLeft(m, 30);
+
+		// add child to right
+		v = (BTNode<Integer>) t5.insertRight(m, 45);
+
+		showTreeElements(t5);
+		
 	}
 
 	/**
